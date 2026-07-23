@@ -1,8 +1,8 @@
-﻿<div align="center">
+<div align="center">
 
-# ðŸ§  PaperBrain
+# 🧠 PaperBrain
 
-### AI-Powered Document Intelligence â€” Chat with Any PDF in Real Time
+### AI-Powered Document Intelligence — Chat with Any PDF in Real Time
 
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.109+-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
@@ -17,13 +17,13 @@
 
 <br/>
 
-**Upload any PDF â†’ Ask questions â†’ Get AI-grounded answers with real-time streaming**
+**Upload any PDF → Ask questions → Get AI-grounded answers with real-time streaming**
 
-A production-grade, full-stack RAG application built with a 7-agent pipeline, multi-provider LLM failover, FAISS vector search, and SSE streaming â€” deployed with Vercel + Docker/Coolify.
+A production-grade, full-stack RAG application built with a 7-agent pipeline, multi-provider LLM failover, FAISS vector search, and SSE streaming — deployed with Vercel + Docker/Coolify.
 
 <br/>
 
-[![GitHub](https://img.shields.io/badge/GitHub-nachiket0987%2Frag--pdf--chat-181717?style=flat-square&logo=github)](https://github.com/nachiket0987/paperbrain)
+[![GitHub](https://img.shields.io/badge/GitHub-nachiket0987%2Fpaperbrain-181717?style=flat-square&logo=github)](https://github.com/nachiket0987/paperbrain)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Nachiket_Gadilohar-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/nachiket-gadilohar-profile/)
 [![Email](https://img.shields.io/badge/Email-nachiketlohar0306%40gmail.com-EA4335?style=flat-square&logo=gmail)](mailto:nachiketlohar0306@gmail.com)
 
@@ -31,7 +31,7 @@ A production-grade, full-stack RAG application built with a 7-agent pipeline, mu
 
 ---
 
-## ðŸ“‹ Table of Contents
+## 📋 Table of Contents
 
 - [Overview](#-overview)
 - [Key Features](#-key-features)
@@ -47,123 +47,124 @@ A production-grade, full-stack RAG application built with a 7-agent pipeline, mu
 
 ---
 
-## ðŸš€ Overview
+## 🚀 Overview
 
 **PaperBrain** is a full-stack intelligent document assistant that lets users upload PDF files and converse with them using large language models. It combines a **React + TypeScript** frontend with a **FastAPI** backend powered by a custom 7-stage multi-agent pipeline.
 
 The system uses **FAISS** for vector storage and **LangChain** for document processing, with built-in failover across **5 LLM providers** (OpenRouter, Groq, Gemini, HuggingFace, OpenAI). Answers stream in real time using **Server-Sent Events (SSE)**.
 
-> Built to production standards â€” not a toy. Includes rate limiting, anonymous session isolation, Docker deployment, and CORS-safe multi-origin configuration.
+> Built to production standards — not a toy. Includes rate limiting, anonymous session isolation, Docker deployment, and CORS-safe multi-origin configuration.
 
 ---
 
-## âœ¨ Key Features
+## ✨ Key Features
 
 | Feature | Description |
 |---------|-------------|
-| ðŸ“„ **PDF Intelligence** | Upload any PDF â€” text extracted, chunked, embedded, and stored in FAISS in seconds |
-| ðŸ¤– **7-Agent Pipeline** | Extractor â†’ Analyzer â†’ Preprocessor â†’ Optimizer â†’ Synthesizer â†’ Validator â†’ Assembler |
-| âš¡ **Real-Time Streaming** | Answers stream token-by-token via SSE with animated cursor feedback |
-| ðŸ”„ **5-Provider Failover** | Automatic failover: OpenRouter â†’ Groq â†’ Gemini â†’ HuggingFace â†’ OpenAI |
-| ðŸŽ¯ **10+ AI Models** | Select model from a live dropdown â€” GPT-4o, Claude, Gemini, Mixtral, and more |
-| ðŸ”’ **Session Isolation** | Per-browser anonymous UUID keeps each user's FAISS index completely separate |
-| ðŸ“š **Source Citations** | Toggle to reveal the exact PDF pages that contributed to each answer |
-| ðŸ’¾ **Offline History** | Chat transcripts saved to IndexedDB â€” persists across page reloads, no server needed |
-| ðŸ“¦ **FAISS Persistence** | Vector index survives server restarts â€” no need to re-upload PDFs |
-| ðŸ›¡ï¸ **Rate Limiting** | Per-IP limits on `/upload` and `/ask` routes to prevent abuse |
-| ðŸ³ **Docker Ready** | Dockerfile with non-root user, health checks, and Coolify/VPS deployment config |
+| 📄 **PDF Intelligence** | Upload any PDF — text extracted, chunked, embedded, and stored in FAISS in seconds |
+| 🤖 **7-Agent Pipeline** | Extractor → Analyzer → Preprocessor → Optimizer → Synthesizer → Validator → Assembler |
+| ⚡ **Real-Time Streaming** | Answers stream token-by-token via SSE with animated cursor feedback |
+| 🔄 **5-Provider Failover** | Automatic failover: OpenRouter → Groq → Gemini → HuggingFace → OpenAI |
+| 🎯 **10+ AI Models** | Select model from a live dropdown — GPT-4o, Claude, Gemini, Mixtral, and more |
+| 🔒 **Session Isolation** | Per-browser anonymous UUID keeps each user's FAISS index completely separate |
+| 📚 **Source Citations** | Toggle to reveal the exact PDF pages that contributed to each answer |
+| 💾 **Offline History** | Chat transcripts saved to IndexedDB — persists across page reloads, no server needed |
+| 📦 **FAISS Persistence** | Vector index survives server restarts — no need to re-upload PDFs |
+| 🛡️ **Rate Limiting** | Per-IP limits on `/upload` and `/ask` routes to prevent abuse |
+| 🐳 **Docker Ready** | Dockerfile with non-root user, health checks, and Coolify/VPS deployment config |
 
 ---
 
-## ðŸ—ï¸ Architecture & Workflow
+## 🏗️ Architecture & Workflow
 
 ```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚                     React SPA (Frontend)                     â”‚
-â”‚                                                              â”‚
-â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”‚
-â”‚  â”‚ PDF Uploadâ”‚   â”‚ Model Select â”‚   â”‚ Chat Interface (SSE)â”‚  â”‚
-â”‚  â””â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”˜   â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”˜   â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â”‚
-â”‚       â”‚                â”‚                       â”‚             â”‚
-â”‚       â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜             â”‚
-â”‚                        â”‚ HTTP + SSE                          â”‚
-â”‚            X-Chat-Session-Id header (UUID)                   â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-                         â”‚
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â–¼â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚                   FastAPI Backend                            â”‚
-â”‚                                                              â”‚
-â”‚  POST /upload          POST /ask/stream        GET /models   â”‚
-â”‚       â”‚                      â”‚                      â”‚        â”‚
-â”‚       â–¼                      â–¼                      â”‚        â”‚
-â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”              â”‚        â”‚
-â”‚  â”‚ PDF Loader  â”‚    â”‚  7-Agent RAG   â”‚â—„â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜        â”‚
-â”‚  â”‚ + Chunker   â”‚    â”‚   Pipeline     â”‚                        â”‚
-â”‚  â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”˜    â””â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”˜                        â”‚
-â”‚         â”‚                   â”‚                                 â”‚
-â”‚         â–¼                   â–¼                                 â”‚
-â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”  â”‚
-â”‚  â”‚  Embeddings â”‚    â”‚  FAISS Retrievalâ”‚   â”‚ LLM Provider   â”‚  â”‚
-â”‚  â”‚  (sentence- â”‚    â”‚  (Top-K Chunks)â”‚   â”‚ Failover Chain â”‚  â”‚
-â”‚  â”‚ transformers)â”‚   â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜   â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜  â”‚
-â”‚  â””â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”˜                                             â”‚
-â”‚         â”‚                                                    â”‚
-â”‚         â–¼                                                    â”‚
-â”‚  â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â” â”‚
-â”‚  â”‚        FAISS Vector Store (Per-Session on Disk)        â”‚ â”‚
-â”‚  â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜ â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
++--------------------------------------------------------------+
+|                     React SPA (Frontend)                     |
+|                                                              |
+|  +----------+   +--------------+   +--------------------+   |
+|  | PDF Upload|   | Model Select |   | Chat Interface(SSE)|   |
+|  +----+-----+   +------+-------+   +----------+---------+   |
+|       |                |                       |             |
+|       +----------------+-----------------------+             |
+|                        | HTTP + SSE                          |
+|            X-Chat-Session-Id header (UUID)                   |
++------------------------+-------------------------------------+
+                         |
++------------------------v-------------------------------------+
+|                   FastAPI Backend                            |
+|                                                              |
+|  POST /upload          POST /ask/stream        GET /models   |
+|       |                      |                      |        |
+|       v                      v                      |        |
+|  +-------------+    +----------------+              |        |
+|  | PDF Loader  |    |  7-Agent RAG   |<-------------+        |
+|  | + Chunker   |    |   Pipeline     |                       |
+|  +------+------+    +-------+--------+                       |
+|         |                   |                                |
+|         v                   v                                |
+|  +-------------+    +----------------+   +--------------+    |
+|  |  Embeddings |    | FAISS Retrieval|   | LLM Provider |    |
+|  | (sentence-  |    | (Top-K Chunks) |   | Failover     |    |
+|  | transformers)|   +----------------+   +--------------+    |
+|  +------+------+                                             |
+|         |                                                    |
+|         v                                                    |
+|  +------------------------------------------------------+    |
+|  |      FAISS Vector Store (Per-Session on Disk)        |    |
+|  +------------------------------------------------------+    |
++--------------------------------------------------------------+
 ```
 
 ### Request Flow
 
 ```
 User Question
-    â”‚
-    â–¼
-1. Session validated â†’ FAISS index loaded for this browser session
-2. Query embedded â†’ Top-K relevant chunks retrieved from FAISS
-3. Retrieved context passed to 7-Agent pipeline
-4. Pipeline constructs grounded prompt â†’ LLM called (with failover)
+    |
+    v
+1. Session validated  --> FAISS index loaded for this browser session
+2. Query embedded     --> Top-K relevant chunks retrieved from FAISS
+3. Retrieved context  --> Passed to 7-Agent pipeline
+4. Pipeline builds grounded prompt --> LLM called (with failover)
 5. Answer streamed back via SSE token-by-token
 6. Source snippets optionally attached to response
 ```
 
 ---
 
-## ðŸ¤– 7-Agent Pipeline
+## 🤖 7-Agent Pipeline
 
-The heart of this project â€” a sequential multi-agent architecture where each agent has a single, well-defined responsibility:
+The heart of this project — a sequential multi-agent architecture where each agent has a single, well-defined responsibility:
 
 ```
 PDF Text
-   â”‚
-   â–¼
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚  Extractor  â”‚â”€â”€â”€â”€â–¶â”‚  Analyzer   â”‚â”€â”€â”€â”€â–¶â”‚ Preprocessor  â”‚
-â”‚             â”‚     â”‚             â”‚     â”‚               â”‚
-â”‚ Pulls raw   â”‚     â”‚ Understands â”‚     â”‚ Cleans and    â”‚
-â”‚ text chunks â”‚     â”‚ context &   â”‚     â”‚ normalizes    â”‚
-â”‚ from FAISS  â”‚     â”‚ intent      â”‚     â”‚ retrieved     â”‚
-â”‚ retrieval   â”‚     â”‚             â”‚     â”‚ chunks        â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”˜
-                                                â”‚
-         â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-         â–¼
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚  Optimizer  â”‚â”€â”€â”€â”€â–¶â”‚ Synthesizer â”‚â”€â”€â”€â”€â–¶â”‚   Validator   â”‚â”€â”€â”€â”€â–¶â”‚ Assembler â”‚
-â”‚             â”‚     â”‚             â”‚     â”‚               â”‚     â”‚           â”‚
-â”‚ Refines the â”‚     â”‚ Generates   â”‚     â”‚ Checks answer â”‚     â”‚ Packages  â”‚
-â”‚ prompt for  â”‚     â”‚ answer with â”‚     â”‚ quality and   â”‚     â”‚ final JSON â”‚
-â”‚ the LLM     â”‚     â”‚ chosen LLM  â”‚     â”‚ grounding     â”‚     â”‚ + sources â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+   |
+   v
++-------------+     +-------------+     +---------------+
+|  Extractor  |---->|  Analyzer   |---->| Preprocessor  |
+|             |     |             |     |               |
+| Pulls raw   |     | Understands |     | Cleans and    |
+| text chunks |     | context &   |     | normalizes    |
+| from FAISS  |     | intent      |     | retrieved     |
+| retrieval   |     |             |     | chunks        |
++-------------+     +-------------+     +-------+-------+
+                                                |
+         +--------------------------------------+
+         v
++-------------+     +-------------+     +---------------+     +-----------+
+|  Optimizer  |---->| Synthesizer |---->|   Validator   |---->| Assembler |
+|             |     |             |     |               |     |           |
+| Refines the |     | Generates   |     | Checks answer |     | Packages  |
+| prompt for  |     | answer with |     | quality and   |     | final JSON|
+| the LLM     |     | chosen LLM  |     | grounding     |     | + sources |
++-------------+     +-------------+     +---------------+     +-----------+
 ```
 
 ---
 
-## ðŸ› ï¸ Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
+
 | Technology | Version | Purpose |
 |------------|---------|---------|
 | React | 18.3 | UI framework |
@@ -176,6 +177,7 @@ PDF Text
 | Sonner | 2.0 | Toast notifications |
 
 ### Backend
+
 | Technology | Version | Purpose |
 |------------|---------|---------|
 | FastAPI | 0.109+ | REST API framework |
@@ -189,6 +191,7 @@ PDF Text
 | Tenacity | Latest | Retry logic for LLM calls |
 
 ### Infrastructure
+
 | Technology | Purpose |
 |------------|---------|
 | Docker | Containerization with non-root user & health checks |
@@ -197,68 +200,68 @@ PDF Text
 
 ---
 
-## ðŸ“ Project Structure
+## 📁 Project Structure
 
 ```
 paperbrain/
-â”œâ”€â”€ README.md
-â”œâ”€â”€ docs/
-â”‚   â””â”€â”€ COOLIFY_PUBLIC_BACKEND_GUIDE.md   # VPS deployment guide
-â”‚
-â”œâ”€â”€ frontend/
-â”‚   â”œâ”€â”€ index.html
-â”‚   â”œâ”€â”€ package.json
-â”‚   â”œâ”€â”€ vite.config.ts
-â”‚   â”œâ”€â”€ tailwind.config.ts
-â”‚   â””â”€â”€ src/
-â”‚       â”œâ”€â”€ main.tsx                      # App entry point
-â”‚       â”œâ”€â”€ App.tsx                       # Router & providers
-â”‚       â”œâ”€â”€ pages/
-â”‚       â”‚   â”œâ”€â”€ home.tsx                  # Landing page
-â”‚       â”‚   â”œâ”€â”€ chat.tsx                  # Main chat interface
-â”‚       â”‚   â”œâ”€â”€ about.tsx                 # Project info
-â”‚       â”‚   â””â”€â”€ api-status.tsx            # Live API health monitor
-â”‚       â”œâ”€â”€ components/
-â”‚       â”‚   â”œâ”€â”€ chat/                     # ChatInput, ChatMessage, PDFUpload, ModelSelector
-â”‚       â”‚   â”œâ”€â”€ layout/                   # Header, Footer, PageWrapper
-â”‚       â”‚   â”œâ”€â”€ sections/                 # Landing page sections
-â”‚       â”‚   â””â”€â”€ ui/                       # Reusable primitives (GlassCard, Badge, Buttonâ€¦)
-â”‚       â”œâ”€â”€ hooks/                        # use-chat, use-health, use-pdf-upload
-â”‚       â”œâ”€â”€ lib/                          # api.ts, constants.ts, storage, session
-â”‚       â””â”€â”€ types/                        # Shared TypeScript interfaces
-â”‚
-â””â”€â”€ backend/
-    â”œâ”€â”€ app/
-    â”‚   â”œâ”€â”€ main.py                       # FastAPI app, middleware, startup
-    â”‚   â”œâ”€â”€ config.py                     # Env-driven settings (Pydantic)
-    â”‚   â”œâ”€â”€ routes/
-    â”‚   â”‚   â”œâ”€â”€ health.py                 # GET /, /health, /status
-    â”‚   â”‚   â”œâ”€â”€ upload.py                 # POST /upload
-    â”‚   â”‚   â”œâ”€â”€ chat.py                   # POST /ask, /ask/stream
-    â”‚   â”‚   â””â”€â”€ oversight.py              # POST /api/oversight (Sentry tunnel)
-    â”‚   â”œâ”€â”€ services/
-    â”‚   â”‚   â”œâ”€â”€ vector_store.py           # FAISS session management & LRU eviction
-    â”‚   â”‚   â”œâ”€â”€ rate_limiter.py           # Per-IP request limits
-    â”‚   â”‚   â””â”€â”€ cleanup.py               # Startup stale-session removal
-    â”‚   â””â”€â”€ agents/
-    â”‚       â”œâ”€â”€ pipeline.py               # Orchestrates all 7 agents
-    â”‚       â”œâ”€â”€ extractor.py              # Agent 1: Context retrieval
-    â”‚       â”œâ”€â”€ analyzer.py               # Agent 2: Intent analysis
-    â”‚       â”œâ”€â”€ preprocessor.py           # Agent 3: Chunk normalization
-    â”‚       â”œâ”€â”€ optimizer.py              # Agent 4: Prompt refinement
-    â”‚       â”œâ”€â”€ synthesizer.py            # Agent 5: LLM answer generation
-    â”‚       â”œâ”€â”€ validator.py              # Agent 6: Answer quality check
-    â”‚       â””â”€â”€ assembler.py              # Agent 7: Final response packaging
-    â”œâ”€â”€ requirements.txt
-    â”œâ”€â”€ requirements-dev.txt
-    â”œâ”€â”€ .env.example
-    â”œâ”€â”€ Dockerfile
-    â””â”€â”€ .dockerignore
+├── README.md
+├── docs/
+│   └── COOLIFY_PUBLIC_BACKEND_GUIDE.md   # VPS deployment guide
+│
+├── frontend/
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.ts
+│   ├── tailwind.config.ts
+│   └── src/
+│       ├── main.tsx                      # App entry point
+│       ├── App.tsx                       # Router & providers
+│       ├── pages/
+│       │   ├── home.tsx                  # Landing page
+│       │   ├── chat.tsx                  # Main chat interface
+│       │   ├── about.tsx                 # Project info
+│       │   └── api-status.tsx            # Live API health monitor
+│       ├── components/
+│       │   ├── chat/                     # ChatInput, ChatMessage, PDFUpload, ModelSelector
+│       │   ├── layout/                   # Header, Footer, PageWrapper
+│       │   ├── sections/                 # Landing page sections
+│       │   └── ui/                       # Reusable primitives (GlassCard, Badge, Button...)
+│       ├── hooks/                        # use-chat, use-health, use-pdf-upload
+│       ├── lib/                          # api.ts, constants.ts, storage, session
+│       └── types/                        # Shared TypeScript interfaces
+│
+└── backend/
+    ├── app/
+    │   ├── main.py                       # FastAPI app, middleware, startup
+    │   ├── config.py                     # Env-driven settings (Pydantic)
+    │   ├── routes/
+    │   │   ├── health.py                 # GET /, /health, /status
+    │   │   ├── upload.py                 # POST /upload
+    │   │   ├── chat.py                   # POST /ask, /ask/stream
+    │   │   └── oversight.py              # POST /api/oversight (Sentry tunnel)
+    │   ├── services/
+    │   │   ├── vector_store.py           # FAISS session management & LRU eviction
+    │   │   ├── rate_limiter.py           # Per-IP request limits
+    │   │   └── cleanup.py               # Startup stale-session removal
+    │   └── agents/
+    │       ├── pipeline.py               # Orchestrates all 7 agents
+    │       ├── extractor.py              # Agent 1: Context retrieval
+    │       ├── analyzer.py               # Agent 2: Intent analysis
+    │       ├── preprocessor.py           # Agent 3: Chunk normalization
+    │       ├── optimizer.py              # Agent 4: Prompt refinement
+    │       ├── synthesizer.py            # Agent 5: LLM answer generation
+    │       ├── validator.py              # Agent 6: Answer quality check
+    │       └── assembler.py              # Agent 7: Final response packaging
+    ├── requirements.txt
+    ├── requirements-dev.txt
+    ├── .env.example
+    ├── Dockerfile
+    └── .dockerignore
 ```
 
 ---
 
-## ðŸ Getting Started
+## 🏁 Getting Started
 
 ### Prerequisites
 
@@ -292,14 +295,14 @@ pip install -r requirements.txt
 
 # Configure environment
 cp .env.example .env
-# âœï¸  Open .env and set: OPENROUTER_API_KEY=your_key_here
+# Open .env and set: OPENROUTER_API_KEY=your_key_here
 
 # Start the server
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-âœ… Backend running at: `http://127.0.0.1:8000`  
-ðŸ“– Interactive API docs: `http://127.0.0.1:8000/docs`
+✅ Backend running at: `http://127.0.0.1:8000`  
+📖 Interactive API docs: `http://127.0.0.1:8000/docs`
 
 ### 3. Setup & Run Frontend
 
@@ -315,19 +318,19 @@ cp .env.example .env
 npm run dev
 ```
 
-âœ… Frontend running at: `http://localhost:5173`
+✅ Frontend running at: `http://localhost:5173`
 
 ### 4. Try it Out
 
 1. Open `http://localhost:5173`
 2. Upload a PDF on the chat page
-3. Ask a question â€” watch the answer stream in real time
+3. Ask a question — watch the answer stream in real time
 4. Toggle **Sources** to see which PDF pages were used
 5. Switch models using the model selector dropdown
 
 ---
 
-## âš™ï¸ Environment Variables
+## ⚙️ Environment Variables
 
 ### Backend (`backend/.env`)
 
@@ -337,11 +340,11 @@ cp backend/.env.example backend/.env
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `OPENROUTER_API_KEY` | âœ… Yes | Primary LLM provider key |
-| `OPENROUTER_API_BASE` | âœ… Yes | `https://openrouter.ai/api/v1` |
+| `OPENROUTER_API_KEY` | ✅ Yes | Primary LLM provider key |
+| `OPENROUTER_API_BASE` | ✅ Yes | `https://openrouter.ai/api/v1` |
 | `DEFAULT_MODEL` | Recommended | Default model ID (e.g. `openai/gpt-4o-mini`) |
 | `DEFAULT_PROVIDER` | Recommended | Primary provider hint |
-| `CORS_ORIGINS` | âœ… Production | Allowed frontend origins (comma-separated) |
+| `CORS_ORIGINS` | ✅ Production | Allowed frontend origins (comma-separated) |
 | `FAISS_PERSIST_DIR` | Recommended | Directory for vector index storage |
 | `MAX_VECTOR_SESSIONS` | Recommended | Max concurrent sessions (LRU eviction) |
 | `FAISS_SESSION_MAX_AGE_DAYS` | Recommended | Auto-cleanup age for stale sessions |
@@ -357,14 +360,14 @@ cp backend/.env.example backend/.env
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `VITE_API_BASE_URL` | âœ… Production | Backend public base URL |
+| `VITE_API_BASE_URL` | ✅ Production | Backend public base URL |
 | `VITE_DEV_PROXY_TARGET` | Optional | Local Vite proxy target |
 | `VITE_SENTRY_DSN` | Optional | Frontend Sentry DSN |
 | `VITE_APP_ENV` | Optional | Environment label |
 
 ---
 
-## ðŸ“¡ API Reference
+## 📡 API Reference
 
 > All data routes require the `X-Chat-Session-Id` header (UUID generated by the browser).
 
@@ -377,8 +380,8 @@ cp backend/.env.example backend/.env
 | `GET` | `/pipeline-info` | Agent pipeline stage descriptions |
 | `GET` | `/runtime-summary` | Public runtime metrics (JSON) |
 | `POST` | `/upload` | Upload PDF & build FAISS index |
-| `POST` | `/ask` | Ask question â†’ JSON response |
-| `POST` | `/ask/stream` | Ask question â†’ SSE token stream |
+| `POST` | `/ask` | Ask question — JSON response |
+| `POST` | `/ask/stream` | Ask question — SSE token stream |
 | `POST` | `/api/oversight` | Sentry error tunnel |
 
 ### Example: Ask with Streaming
@@ -404,9 +407,9 @@ curl -X POST "http://localhost:8000/upload" \
 
 ---
 
-## ðŸš€ Deployment
+## 🚀 Deployment
 
-### Backend â†’ Docker + Coolify (VPS)
+### Backend → Docker + Coolify (VPS)
 
 ```bash
 # Build Docker image
@@ -428,7 +431,7 @@ docker run -p 8000:3000 \
 
 See [`docs/COOLIFY_PUBLIC_BACKEND_GUIDE.md`](docs/COOLIFY_PUBLIC_BACKEND_GUIDE.md) for full Traefik + domain setup.
 
-### Frontend â†’ Vercel
+### Frontend → Vercel
 
 | Setting | Value |
 |---------|-------|
@@ -441,7 +444,7 @@ See [`docs/COOLIFY_PUBLIC_BACKEND_GUIDE.md`](docs/COOLIFY_PUBLIC_BACKEND_GUIDE.m
 
 ---
 
-## ðŸ” Troubleshooting
+## 🔍 Troubleshooting
 
 | Problem | Solution |
 |---------|----------|
@@ -449,11 +452,11 @@ See [`docs/COOLIFY_PUBLIC_BACKEND_GUIDE.md`](docs/COOLIFY_PUBLIC_BACKEND_GUIDE.m
 | Vercel npm peer conflict | Use `--legacy-peer-deps` in install command |
 | No model response | Verify at least one provider API key is set and valid |
 | Empty/wrong retrieval | Re-upload PDF; check session UUID consistency in headers |
-| 404 probe logs | Normal â€” public internet scanners; not an error |
+| 404 probe logs | Normal — public internet scanners; not an error |
 
 ---
 
-## ðŸ¤ Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Here's how to get started:
 
@@ -481,7 +484,7 @@ python -m unittest discover -s tests -p "test_*.py"
 
 ---
 
-## ðŸ“„ License
+## 📄 License
 
 This project is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
 
@@ -489,13 +492,12 @@ This project is open source and available under the [MIT License](https://openso
 
 <div align="center">
 
-**Built with â¤ï¸ by [Nachiket Gadilohar](https://linkedin.com/in/nachiket-gadilohar-profile/)**
+**Built with ❤️ by [Nachiket Gadilohar](https://linkedin.com/in/nachiket-gadilohar-profile/)**
 
 [![GitHub](https://img.shields.io/badge/GitHub-nachiket0987-181717?style=flat-square&logo=github)](https://github.com/nachiket0987)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/nachiket-gadilohar-profile/)
 [![Email](https://img.shields.io/badge/Email-nachiketlohar0306%40gmail.com-EA4335?style=flat-square&logo=gmail)](mailto:nachiketlohar0306@gmail.com)
 
-*If this project helped you, give it a â­ on GitHub!*
+*If this project helped you, give it a ⭐ on GitHub!*
 
 </div>
-
