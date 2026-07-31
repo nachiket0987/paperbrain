@@ -484,11 +484,7 @@ python -m unittest discover -s tests -p "test_*.py"
 
 ---
 
-## 📄 License
 
-This project is open source and available under the [MIT License](https://opensource.org/licenses/MIT).
-
----
 
 <div align="center">
 
