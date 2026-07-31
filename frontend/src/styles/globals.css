@@ -116,12 +116,25 @@
     background-clip: text;
   }
 
-  /* CTA Shine effect wrapper */
-  .cta-shine-wrap {
-    position: relative;
-    display: inline-flex;
-    overflow: hidden;
+  /* Mitchell Sparrow exact hero buttons */
+  .heroButton {
+    padding: 0.5rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 9999px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: #94a3b8;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .heroButton:hover {
+    border-color: rgba(104, 178, 160, 0.6);
+    color: #68b2a0;
+    box-shadow: 0 0 15px rgba(104, 178, 160, 0.2);
   }
 
   .cta-shine-wrap > * {
@@ -455,37 +468,68 @@
   }
 }
 
+/* ============================================================================
+   Luxury Classic + AI Aesthetic Utilities
+   ============================================================================ */
+
+.font-serif-classic {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+}
+
+.font-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.shimmer-text-emerald {
+  background: linear-gradient(135deg, #00F2FE 0%, #10B981 50%, #F59E0B 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 4s ease infinite;
+}
+
+@keyframes textShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.luxury-glass-card {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-glass-card:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 25px 60px rgba(6, 182, 212, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
 /* Force global scrollbar styling (root viewport) */
 html,
 body {
   scrollbar-width: thin;
-  scrollbar-color: #5769ef #000000;
+  scrollbar-color: #06B6D4 #030712;
 }
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
+  width: 5px;
+  height: 5px;
 }
 
 html::-webkit-scrollbar-track,
-body::-webkit-scrollbar-track,
-html::-webkit-scrollbar-track-piece,
-body::-webkit-scrollbar-track-piece,
-html::-webkit-scrollbar-corner,
-body::-webkit-scrollbar-corner {
-  background: #000000 !important;
+body::-webkit-scrollbar-track {
+  background: #030712 !important;
 }
 
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
-  background-color: #5769ef !important;
+  background: linear-gradient(180deg, #06B6D4, #10B981) !important;
   border-radius: 9999px;
-  border: 1px solid transparent;
-  background-clip: padding-box;
 }
 
-html::-webkit-scrollbar-thumb:hover,
-body::-webkit-scrollbar-thumb:hover {
-  background-color: #5769ef !important;
-}

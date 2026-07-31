@@ -17,6 +17,7 @@ import { Sentry } from "@/lib/sentry";
 import { ChatProvider } from "@/context/chat-context";
 import { ScrollToTop } from "@/components/layout/scroll-to-top";
 import { HomePage } from "@/pages/home";
+import { PortfolioPage } from "@/pages/portfolio";
 import { ChatPage } from "@/pages/chat";
 import { AboutPage } from "@/pages/about";
 import { ApiStatusPage } from "@/pages/api-status";
@@ -53,11 +54,12 @@ function App() {
           <ChatProvider>
             <AnimatePresence mode="wait">
               <Routes>
-                <Route path="/" element={<HomePage />} />
+                <Route path="/" element={<PortfolioPage />} />
+                <Route path="/paperbrain" element={<HomePage />} />
                 <Route path="/chat" element={<ChatPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/api-status" element={<ApiStatusPage />} />
-                <Route path="*" element={<HomePage />} />
+                <Route path="*" element={<PortfolioPage />} />
               </Routes>
             </AnimatePresence>
           </ChatProvider>
