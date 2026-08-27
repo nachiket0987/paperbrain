@@ -233,34 +233,6 @@ export const PORTFOLIO_DATA = {
       featured: true,
     },
     {
-      id: "signlens",
-      title: "SignLens — Real-Time Sign Language Recognition",
-      tagline: "End-to-end computer vision deep learning pipeline using YOLOv5 & Flask",
-      category: "Computer Vision",
-      description: "End-to-end computer vision pipeline for real-time sign language recognition using custom-trained YOLOv5 and Flask API.",
-      longDescription: "SignLens captures video frames, detects hand sign gestures with high precision using a YOLOv5 object detection model, and streams natural language text predictions to the web interface in real time.",
-      highlights: [
-        "Custom dataset annotated & trained with YOLOv5",
-        "Real-time webcam video stream inferencing via OpenCV",
-        "Flask web backend with low-latency image processing",
-        "High accuracy in variable lighting conditions"
-      ],
-      architectureSteps: [
-        { step: "01", title: "Video Capture", desc: "Captures 30 FPS video frame buffer via OpenCV stream." },
-        { step: "02", title: "Frame Preprocessing", desc: "Resizes, normalizes, and applies spatial bounding masks." },
-        { step: "03", title: "YOLOv5 Inference", desc: "Executes PyTorch YOLOv5 object detection model on GPU/CPU." },
-        { step: "04", title: "Text Synthesis", desc: "Translates detected gesture tokens into fluent natural language sentences." }
-      ],
-      metrics: [
-        { label: "Inference Speed", value: "30 FPS Realtime" },
-        { label: "Model", value: "YOLOv5 PyTorch" },
-        { label: "Backend", value: "Flask + OpenCV" }
-      ],
-      techStack: ["Python", "YOLOv5", "PyTorch", "Flask", "OpenCV", "Computer Vision"],
-      githubUrl: "https://github.com/nachiket0987/signlens",
-      featured: true,
-    },
-    {
       id: "hateguard-nlp",
       title: "HateGuard-NLP — Production Hate Speech Classifier",
       tagline: "6-stage MLOps pipeline with LSTM, Docker, CircleCI, and AWS EC2 deployment",
@@ -289,6 +261,89 @@ export const PORTFOLIO_DATA = {
       featured: true,
     },
     {
+      id: "food-calories-estimation",
+      title: "Food Calories & Volume Estimation via Image Processing",
+      tagline: "Computer vision & SVM classifier pipeline for nutritional content & volume estimation",
+      category: "Computer Vision",
+      description: "Computer vision and SVM classification pipeline utilizing Canny edge detection, watershed segmentation, and Gabor filters to identify food items and estimate volume & calorie content.",
+      longDescription: "Leverages OpenCV image processing algorithms (edge detection, morphological segmentation, color histograms, and Gabor texture feature extraction) combined with Support Vector Machines (SVM) to accurately measure food volume and calculate total caloric values.",
+      highlights: [
+        "Canny Edge Detection & Watershed Segmentation for contour extraction",
+        "Gabor Filters & Color Histogram feature matrices",
+        "SVM Classifier for multi-food item recognition",
+        "Volumetric estimation formulas for nutritional breakdown"
+      ],
+      metrics: [
+        { label: "Vision", value: "OpenCV + SVM" },
+        { label: "Pipeline", value: "Canny + Watershed" },
+        { label: "Task", value: "Calorie & Volume" }
+      ],
+      techStack: ["Python", "OpenCV", "Scikit-Learn", "SVM", "Image Processing", "Computer Vision"],
+      githubUrl: "https://github.com/nachiket0987/Food-Calories-Estimation-Using-Image-Processing",
+      featured: true,
+    },
+    {
+      id: "uberdrive-analytics-engine",
+      title: "UberDrive Analytics & Intelligence Engine",
+      tagline: "End-to-end data analytics dashboard & predictive price engine built with Streamlit & Seaborn",
+      category: "Analytics",
+      description: "Analytics and intelligence engine for Uber ride data, discovering trip patterns, surge trends, and price factors via Python, Pandas, Seaborn, and Streamlit.",
+      longDescription: "Comprehensive data science and analytical engine analyzing thousands of ride-share trips to evaluate distance-cost correlations, peak hour surges, weather impact, and passenger behavior with an interactive Streamlit dashboard.",
+      highlights: [
+        "End-to-end trip & price analytics dashboard",
+        "Weather condition & peak-hour surge correlation modeling",
+        "Interactive Streamlit web visualization app",
+        "Exploratory Data Analysis (EDA) & insight generation"
+      ],
+      metrics: [
+        { label: "Framework", value: "Streamlit + Pandas" },
+        { label: "Visuals", value: "Seaborn + Matplotlib" },
+        { label: "Domain", value: "Ride-Share Analytics" }
+      ],
+      techStack: ["Python", "Pandas", "Streamlit", "Seaborn", "Data Analytics", "Scikit-Learn"],
+      githubUrl: "https://github.com/nachiket0987/uberdrive-analytics-engine",
+      featured: true,
+    },
+    {
+      id: "weather-prediction-cnn",
+      title: "Weather Prediction with Deep CNN",
+      tagline: "Deep Convolutional Neural Network for multi-class satellite weather image classification",
+      category: "NLP & Deep Learning",
+      description: "Deep Learning computer vision system utilizing Convolutional Neural Networks (CNN) for satellite weather image classification and atmospheric pattern recognition.",
+      longDescription: "Trained a multi-layer Convolutional Neural Network (CNN) in PyTorch to classify atmospheric satellite imagery into weather categories (cloudy, rainy, sunny, hazardous conditions) with high validation accuracy.",
+      highlights: [
+        "Deep Convolutional Neural Network (CNN) architecture",
+        "Satellite & atmospheric image dataset preprocessing",
+        "PyTorch model training & hyperparameter optimization",
+        "Confusion matrix & classification report metrics"
+      ],
+      techStack: ["Python", "PyTorch", "CNN", "Deep Learning", "OpenCV"],
+      githubUrl: "https://github.com/nachiket0987/Weather_Prediction_with_CNN",
+      featured: false,
+    },
+    {
+      id: "signlens",
+      title: "SignLens — Real-Time Sign Language Recognition",
+      tagline: "End-to-end computer vision deep learning pipeline using YOLOv5 & Flask",
+      category: "Computer Vision",
+      description: "End-to-end computer vision pipeline for real-time sign language recognition using custom-trained YOLOv5 and Flask API.",
+      longDescription: "SignLens captures video frames, detects hand sign gestures with high precision using a YOLOv5 object detection model, and streams natural language text predictions to the web interface in real time.",
+      highlights: [
+        "Custom dataset annotated & trained with YOLOv5",
+        "Real-time webcam video stream inferencing via OpenCV",
+        "Flask web backend with low-latency image processing",
+        "High accuracy in variable lighting conditions"
+      ],
+      metrics: [
+        { label: "Inference Speed", value: "30 FPS Realtime" },
+        { label: "Model", value: "YOLOv5 PyTorch" },
+        { label: "Backend", value: "Flask + OpenCV" }
+      ],
+      techStack: ["Python", "YOLOv5", "PyTorch", "Flask", "OpenCV", "Computer Vision"],
+      githubUrl: "https://github.com/nachiket0987/signlens",
+      featured: false,
+    },
+    {
       id: "tripmind-ai",
       title: "TripMind AI — Multi-Agent Travel Intelligence",
       tagline: "Multi-agent travel planning system deployed via Docker on AWS EC2",
@@ -301,14 +356,9 @@ export const PORTFOLIO_DATA = {
         "Interactive Streamlit dashboard",
         "Dockerized AWS EC2 deployment with GitHub Actions"
       ],
-      metrics: [
-        { label: "Orchestration", value: "TaskflowAI Agents" },
-        { label: "Deployment", value: "AWS EC2 Docker" },
-        { label: "CI/CD", value: "GitHub Actions" }
-      ],
-      techStack: ["Python", "TaskflowAI", "OpenAI", "Streamlit", "Docker", "AWS EC2", "GitHub Actions"],
+      techStack: ["Python", "TaskflowAI", "OpenAI", "Streamlit", "Docker", "AWS EC2"],
       githubUrl: "https://github.com/nachiket0987/tripmind-ai",
-      featured: true,
+      featured: false,
     },
     {
       id: "ai-database-query-bot",
