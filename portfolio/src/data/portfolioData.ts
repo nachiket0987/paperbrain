@@ -35,8 +35,8 @@ export const PORTFOLIO_DATA = {
     experienceYears: "2+",
     github: "https://github.com/nachiket0987",
     linkedin: "https://www.linkedin.com/in/nachiket-gadilohar-profile/",
-    bio: "AI Engineer with 2+ years of expertise in developing production AI pipelines for engineering automation. Skilled in applied machine learning, computer vision, NLP, OCR, generative AI, and multi-agent RAG systems.",
-    heroStatement: "Building AI Agents, RAG systems, and computer vision pipelines that reduce manual effort and solve real-world problems.",
+    bio: "AI Engineer with 2+ years of expertise in developing production AI pipelines for engineering automation. Skilled in applied machine learning, computer vision, NLP, OCR, generative AI, multi-agent RAG systems, and PLC industrial automation.",
+    heroStatement: "Building AI Agents, RAG systems, PLC automation engines, and computer vision pipelines that reduce manual effort and solve real-world problems.",
     transitionStory: "My journey started with a B.Sc. in Physics at Fergusson College, Pune, where I built a deep foundation in mathematical modeling and analytical problem-solving. Driven by the desire to apply physics-level mathematical rigor to intelligent systems, I transitioned into an M.Sc. in Data Science / Computer Applications at Symbiosis Institute of Geoinformatics. Today, I turn complex frontier AI models into production-ready software systems.",
   },
   
@@ -51,13 +51,13 @@ export const PORTFOLIO_DATA = {
   pillars: [
     {
       index: "01",
-      title: "Production-First ML",
-      description: "Engineering resilient AI pipelines grounded in real workflows — from AutoCAD automation to PDF-to-XML OCR document intelligence.",
+      title: "Production-First ML & Industrial AI",
+      description: "Engineering resilient AI pipelines grounded in real workflows — from AutoCAD automation to PLC Agent OS ladder logic synthesis and document intelligence.",
       tag: "Enterprise Automation"
     },
     {
       index: "02",
-      title: "Retrieval & Multi-Agent RAG",
+      title: "Retrieval & Multi-Agent Systems",
       description: "Designing multi-agent orchestration systems, FAISS vector search, and real-time SSE token streaming for accurate LLM answers.",
       tag: "LLM Orchestration"
     },
@@ -77,7 +77,7 @@ export const PORTFOLIO_DATA = {
       icon: "Brain",
       skills: [
         { name: "Retrieval-Augmented Generation (RAG)", level: 95 },
-        { name: "Multi-Agent LLM Systems", level: 92 },
+        { name: "Multi-Agent LLM & Agent OS", level: 94 },
         { name: "Prompt Engineering", level: 90 },
         { name: "Vector Embeddings (FAISS)", level: 94 },
         { name: "Knowledge Graphs", level: 85 },
@@ -130,15 +130,15 @@ export const PORTFOLIO_DATA = {
         { name: "Streamlit AI Apps", level: 94 },
         { name: "Tailwind CSS", level: 90 },
         { name: "Git & GitHub Actions", level: 92 },
-        { name: "AutoCAD API Automation", level: 90 }
+        { name: "PLC & Industrial Automation APIs", level: 92 }
       ]
     }
   ],
 
   marqueeSkills: [
-    "RAG Pipelines", "Multi-Agent LLMs", "FastAPI", "Python", "YOLOv5", "FAISS Vector Search", 
-    "Docker", "AWS EC2", "CircleCI", "React.js", "TypeScript", "OpenAI GPT-4", 
-    "PyTorch", "Text-to-SQL", "Computer Vision", "PostgreSQL", "PowerBI", "LangChain"
+    "PLC Agent OS", "Multi-Agent LLMs", "RAG Pipelines", "FastAPI", "Python", "YOLOv5", 
+    "FAISS Vector Search", "Docker", "AWS EC2", "CircleCI", "React.js", "TypeScript", 
+    "OpenAI GPT-4", "PyTorch", "Text-to-SQL", "Computer Vision", "PostgreSQL", "PowerBI"
   ],
 
   certifications: [
@@ -201,6 +201,34 @@ export const PORTFOLIO_DATA = {
   ] as Certification[],
 
   projects: [
+    {
+      id: "plc-agent-os",
+      title: "PLC Agent OS — Industrial Automation AI Engine",
+      tagline: "Autonomous multi-agent OS for IEC 61131-3 PLC ladder logic synthesis & SCADA telemetry verification",
+      category: "RAG & Agents",
+      description: "Autonomous multi-agent system orchestrating LLM agents to parse industrial control specifications, synthesize IEC 61131-3 PLC ladder logic, and verify SCADA telemetry routines.",
+      longDescription: "PLC Agent OS bridges modern frontier AI with industrial automation. It converts natural language control descriptions and P&ID diagrams into verified IEC 61131-3 Structured Text and Ladder Logic routines, running real-time OPC UA / Modbus simulation checks before hardware deployment.",
+      highlights: [
+        "Multi-agent IEC 61131-3 PLC Ladder Logic & Structured Text synthesis",
+        "Formal logic verification sandbox eliminating physical commissioning bugs",
+        "Industrial SCADA protocol bridging (OPC UA / Modbus / MQTT)",
+        "Reduces PLC programming turnaround time by over 80%"
+      ],
+      architectureSteps: [
+        { step: "01", title: "P&ID Intent Agent", desc: "Parses industrial control sequence specs and piping & instrumentation diagrams." },
+        { step: "02", title: "PLC Code Synthesizer", desc: "Generates standardized IEC 61131-3 Structured Text and Ladder Logic code." },
+        { step: "03", title: "Verification Sandbox", desc: "Executes virtual PLC simulation checks to validate state machine logic." },
+        { step: "04", title: "SCADA Telemetry Agent", desc: "Bridges OPC UA / Modbus telemetry to real-time industrial dashboards." }
+      ],
+      metrics: [
+        { label: "Standard", value: "IEC 61131-3" },
+        { label: "Protocols", value: "OPC UA & Modbus" },
+        { label: "Impact", value: "80% Faster PLC Dev" }
+      ],
+      techStack: ["Python", "FastAPI", "Multi-Agent", "PLC", "IEC 61131-3", "OPC UA", "Modbus", "Docker"],
+      githubUrl: "https://github.com/nachiket0987/plc-agent-os",
+      featured: true,
+    },
     {
       id: "paperbrain",
       title: "PaperBrain — AI-Powered PDF Intelligence",
@@ -438,14 +466,15 @@ export const PORTFOLIO_DATA = {
       period: "Apr 2025 – May 2026",
       type: "work",
       location: "Pune, India",
-      summary: "Led production AI engineering and automation pipelines for industrial engineering workflows.",
+      summary: "Led production AI engineering, PLC automation systems, and AutoCAD pipelines for industrial engineering workflows.",
       bulletPoints: [
+        "Architected PLC Agent OS: an autonomous multi-agent operating system for IEC 61131-3 PLC ladder logic synthesis and SCADA telemetry verification, reducing industrial automation programming time by 80%.",
         "Engineered an AI-driven AutoCAD automation pipeline leveraging Python and computer vision, reducing design turnaround time by 81% (from ~370 to ~70 hours) while ensuring over 90% accuracy.",
         "Developed a PDF-to-XML document intelligence system using Python, FastAPI, and OCR technology, achieving 95% data extraction accuracy and eliminating manual data entry in electrical simulation workflows.",
         "Led requirement analysis, model development, API integration, deployment, and cloud monitoring across multiple engineering automation projects.",
         "Mentored 2 junior team members by creating standardized AI documentation templates and conducting hands-on knowledge transfer sessions."
       ],
-      technologies: ["Python", "FastAPI", "Computer Vision", "OCR", "AutoCAD API", "Docker", "REST APIs"]
+      technologies: ["Python", "FastAPI", "PLC Agent OS", "IEC 61131-3", "OPC UA", "Computer Vision", "OCR", "AutoCAD API", "Docker"]
     },
     {
       id: "personifwy",
