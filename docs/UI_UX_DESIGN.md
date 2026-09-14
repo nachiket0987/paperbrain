@@ -5,13 +5,33 @@
 
 ---
 
-## 1. Design System & Theme
-- **Theme**: Dark glassmorphism interface (Slate 900 background #0f172a, Indigo primary #6366f1).
-- **Layout**: Split 50/50 workspace — Left: Interactive PDF Document Viewer (with page search & highlight); Right: Conversational AI Agent Chat & Citation Drawer.
+## 1. Design Philosophy & Design System
+PaperBrain features a dark-first glassmorphism design system:
+- Background: Slate 900 (#0f172a)
+- Surface: Slate 800 (#1e293b)
+- Primary Accent: Indigo 500 (#6366f1)
+- Success Pill: Emerald 500 (#10b981)
+- Typography: Inter / JetBrains Mono
 
 ---
 
-## 2. Key Screen Flows
-1. **Landing & Drag-and-Drop Zone**: Clean dropzone with sample paper templates.
-2. **Analysis Progress Modal**: Step-by-step 7-agent indicator (Parsing -> Vectorizing -> Indexing -> Ready).
-3. **Split Workspace**: Interactive Q&A stream with clickable citation pills ([Page 12, ¶3]).
+## 2. Workspace Layout & Screen Structure
+
++-------------------------------------------------------------------------------+
+| PaperBrain | document_v1.pdf             [7-Agent Status: Ready] [Upload]    |
++-------------------------------------------------------------------------------+
+| [ PDF VIEWER PANEL - 50% ]             | [ CONVERSATIONAL AI CHAT - 50% ]     |
+| +------------------------------------+ | +----------------------------------+ |
+| | Page 12 / 45                     | | | User: Summarize benchmark results| |
+| |                                    | | |                                  | |
+| | [ HIGHLIGHTED CITATION BOX ]       | | | PaperBrain: According to Table 2 | |
+| | "Accuracy reached 95.4%..."        | | | [Page 12, Section 3], accuracy...| |
+| +------------------------------------+ | +----------------------------------+ |
++-------------------------------------------------------------------------------+
+
+---
+
+## 3. Screen States
+- Loading State: Step-by-step 7-agent animation indicator (Parsing -> Vectorizing -> Ready).
+- Empty State: Drag-and-drop file target with sample academic paper presets.
+- Error State: Toast alert indicating provider failover status.
